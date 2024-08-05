@@ -1,0 +1,83 @@
+.files {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.files-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-dark);
+}
+
+.files-header input {
+  display: none;
+}
+
+.files-actions > button {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary);
+  padding: 5px;
+  font-size: 14px;
+}
+
+.files-actions > button:hover {
+  color: var(--primary);
+}
+.files-actions > button:disabled {
+  color: var(--disabled);
+}
+
+.directory {
+  font-size: 16px;
+  user-select: none;
+  padding: 0 10px;
+  overflow: auto;
+  color: var(--primary);
+}
+
+.directory .tree,
+.directory .tree-node,
+.directory .tree-node-group {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.directory .tree-node-group {
+  padding: 0;
+}
+
+.directory .tree-branch-wrapper,
+.directory .tree-node__leaf {
+  outline: none;
+  outline: none;
+}
+
+.directory .tree-node {
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+
+.directory .tree-node:hover,
+.directory .tree-node:focus,
+.directory .tree-branch-wrapper:focus > .tree-node {
+  border-left: 2px solid var(--secondary);
+}
+
+.directory .tree .tree-node--selected {
+  background: var(--bg-secondary);
+}
+
+.directory .tree-node__branch {
+  display: block;
+}
+
+.directory .icon {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.directory .icon-folder {
+  color: #e8a87c;
+}
